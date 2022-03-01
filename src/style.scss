@@ -1,0 +1,337 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+//Colors
+$navbar-color: #000000;
+$black-color: #000000;
+$white-color: #ffffff;
+$primary-yellow: #f5cd00;
+$primary-gray: #4a4a4a;
+$delete-gray: #bbb9b9;
+$bg-color: #f3f3f3;
+$border-color: rgba(0, 0, 0, 0.125);
+
+$default-font: "Roboto Slab", serif;
+$font-base: 1.1rem;
+$sm-input-width: 30%;
+
+body {
+    background-color: $bg-color;
+    font-family: $default-font;
+    font-size: $font-base;
+}
+
+.black-txt {
+    color: $black-color;
+}
+.gray-txt {
+    color: $primary-gray;
+}
+a {
+    color: $primary-yellow;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+//NAVBAR
+.navbar {
+    background-color: $navbar-color;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: $primary-yellow;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $white-color;
+}
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: $primary-yellow;
+    text-decoration: none;
+}
+
+//HOME FILTER FORM
+input {
+    background-color: transparent;
+    border: 0px solid;
+    border-bottom: 2px solid $primary-gray;
+    color: $bg-color;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+input:hover {
+    border-color: $white-color;
+}
+//input
+input:focus {
+    outline: none;
+    background-color: transparent;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.home-filterForm {
+    background-color: $navbar-color;
+    padding: auto;
+}
+.sm-input {
+    width: $sm-input-width;
+}
+.form-select {
+    width: 10rem;
+    background-color: transparent;
+    border: 0px solid;
+    border-radius: 0;
+    border-bottom: 2px solid $primary-gray;
+    color: $bg-color;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.form-select:focus {
+    outline: none;
+    background-color: transparent;
+    border-color: $white-color;
+    box-shadow: none;
+}
+.form-select:hover {
+    border-color: $white-color;
+}
+.button-PercentageOfAlcohol {
+    font-size: $font-base;
+    background-color: transparent;
+    border: 2px solid $primary-gray;
+    color: $bg-color;
+    padding: 5px;
+}
+.button-PercentageOfAlcohol:hover {
+    cursor: pointer;
+    border-color: $white-color;
+}
+.selectedButton {
+    font-size: $font-base;
+    background-color: transparent;
+    border: 2px solid $white-color;
+    color: $bg-color;
+    padding: 5px;
+}
+.searchButton {
+    font-size: $font-base;
+    border-radius: 0;
+    background-color: transparent;
+    border: 2px solid $primary-yellow;
+    color: $bg-color;
+    padding: 5px;
+}
+.searchButton:hover {
+    background-color: $navbar-color;
+    color: $primary-yellow;
+    border: 2px solid $white-color;
+    box-shadow: 0 0 0 0.25rem rgb(245 205 0 / 50%);
+    cursor: pointer;
+}
+.searchButton:active {
+    background-color: $navbar-color;
+    color: $primary-yellow;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 50%);
+}
+.searchButton:focus {
+    background-color: $navbar-color;
+    color: $primary-yellow;
+    border: 2px solid $bg-color;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 50%);
+}
+
+//RESPONSE PAGINATION & FAVOURITES
+.home-responsePagination {
+    background-color: $bg-color;
+}
+.list-group-item {
+    margin-top: 1rem;
+    padding: 1.3rem;
+}
+.list-group-item:last-child,
+.list-group-item:first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.list-group-item:hover {
+    z-index: 2;
+    color: $white-color;
+    background-color: $primary-yellow;
+    border-color: $border-color;
+    cursor: pointer;
+}
+.list-group-item:hover .starIcon {
+    color: $primary-gray;
+}
+.list-group-item + .list-group-item.active {
+    margin-top: 1rem;
+}
+
+//DELETE ITEMS IN FAVOURITES
+#deleteItem {
+    color: $delete-gray;
+}
+
+//PAGINATION
+.page-link_custom {
+    padding: 1rem;
+}
+.page-link_custom:hover {
+    color: $primary-gray;
+}
+
+//LOADING & ERROR MESSAGE
+.loadingMessage,
+.errorMessage {
+    background-color: $primary-yellow;
+    text-align: center;
+}
+.errorMessage button {
+    font-size: $font-base;
+    border-radius: 0;
+    background-color: $primary-yellow;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    margin: 1rem;
+}
+.errorButton-link {
+    color: black;
+}
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgb(245 205 0 / 50%);
+}
+
+//SINGLE BEER PAGE
+.bg-yellow {
+    background-color: $primary-yellow;
+}
+.bg-black {
+    background-color: $navbar-color;
+    color: white;
+}
+.bg-white {
+    background-color: white;
+    color: black;
+}
+.beerDetails-heroSection {
+    min-height: 200px;
+}
+.detailsBox-heroSection {
+    width: 55%;
+    flex: 3;
+}
+.boxBeer {
+    flex: 2;
+    position: relative;
+}
+.foodBox {
+    font-size: $font-base;
+    background-color: white;
+    box-shadow: 5px 5px $primary-yellow;
+    min-width: 200px;
+    width: 25%;
+    margin: 1.5%;
+    padding: 2.5%;
+}
+.circle-heroSection {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $primary-yellow;
+    position: absolute;
+    right: 20%;
+    top: 70%;
+}
+.beerImg {
+    width: 80px;
+    position: absolute;
+    right: 25%;
+    top: 70%;
+}
+
+@media (max-width: 576px) {
+    .beerDetails-heroSection {
+        flex-direction: column;
+    }
+    .detailsBox-heroSection {
+        width: 100%;
+        position: static;
+        z-index: 10;
+    }
+    .boxBeer {
+        flex: 2;
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    .circle-heroSection {
+        width: 150px;
+        height: 150px;
+        right: 8%;
+        top: 14%;
+    }
+    .beerImg {
+        width: 50px;
+        position: absolute;
+        right: 18%;
+        top: 8%;
+    }
+    .mt-mobileView {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .circle-heroSection {
+        right: 0%;
+        top: 80%;
+    }
+    .beerImg {
+        width: 80px;
+        position: absolute;
+        right: 27%;
+        top: 25%;
+    }
+    .mt-mobileView {
+        margin-top: 2rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1440px) {
+    .circle-heroSection {
+        right: 10%;
+        top: 80%;
+    }
+    .beerImg {
+        width: 80px;
+        position: absolute;
+        right: 24%;
+        top: 15%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .circle-heroSection {
+        right: 10%;
+        top: 80%;
+    }
+    .beerImg {
+        width: 80px;
+        position: absolute;
+        right: 20%;
+        top: 15%;
+    }
+}
