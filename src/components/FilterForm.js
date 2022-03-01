@@ -17,7 +17,7 @@ const FilterForm = () => {
     const [typeOfSearch, setTypeOfSearch] = useState(0);
     let inputQuery = '';
 
-    //logica che gestisce la query all'API
+
     !inputText
         ? inputQuery = `?&page=${inputPage}&abv_gt=${inputMinMaxAlc.min}&abv_lt=${inputMinMaxAlc.max}`
         : typeOfSearch === 0
@@ -30,7 +30,8 @@ const FilterForm = () => {
         setQuery(inputQuery);
     }
     const handleTypeOfSearch = (e) => {
-        setTypeOfSearch(e.target.value);
+        setTypeOfSearch(parseInt(e.target.value));
+        console.log(typeof (typeOfSearch));
         setInputText('');
         setInputPage(1);
     }
@@ -54,9 +55,7 @@ const FilterForm = () => {
             default: setInputMinMaxAlc({ min: 0, max: 100 });
         }
     }
-
     useEffect(() => { setQuery(inputQuery) }, [inputMinMaxAlc, inputPage, typeOfSearch]) // eslint-disable-line
-
     return (
         <Container>
             <form onSubmit={handleSubmit}>
@@ -64,8 +63,8 @@ const FilterForm = () => {
                     <Col xs={12} md={6} className='d-flex justify-content-center'>
                         <input className='sm-input' type="text" placeholder="Search for" name="filterBy" value={inputText} autoComplete='off' onChange={(e) => setInputText(e.target.value)} />
                         <Form.Select aria-label="Default select example" onChange={(e) => handleTypeOfSearch(e)} >
-                            <option value="0">Beer Name</option>
-                            <option value="1">Food</option>
+                            <option value={0}>Beer Name</option>
+                            <option value={1}>Food</option>
                         </Form.Select>
                         <Button className='searchButton' type='submit' ><SearchIcon /></Button>
                     </Col>
