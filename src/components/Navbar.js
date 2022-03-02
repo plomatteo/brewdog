@@ -10,10 +10,16 @@ const Navbar1 = () => {
         <Navbar.Brand><Link to="/"><h1>BREWDOG</h1></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link> <Link to=""> Search your beer </Link></Nav.Link>
-            <Nav.Link onClick={() => { navigate(`/beers/random`) }}> Random beer </Nav.Link>
-            <Nav.Link> <Link to="favourites">Favourites</Link> </Nav.Link>
+          <Nav defaultActiveKey="/" as="ul" className="ms-auto">
+            <Nav.Item as="li">
+              <Nav.Link> <Link to=""> Search your beer </Link></Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Nav.Link eventKey="link-1" onClick={() => { navigate(`/beers/random`) }}> Random beer </Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Nav.Link eventKey="link-2"> <Link to="favourites">Favourites</Link> </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
