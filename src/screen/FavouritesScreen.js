@@ -14,7 +14,7 @@ const FavouriteScreen = () => {
                 <Col sm={12} md={6}>
                     <h1 className='text-center my-5'>Favourites</h1>
                     <ListGroup as="ul">
-                        {favouritesArray.length === 0 && (<ListGroup.Item as="li" className='d-flex justify-content-between'>Nessun preferito salvato</ListGroup.Item>)}
+                        {favouritesArray.length === 0 && (<ListGroup.Item as="li" className='d-flex justify-content-between'>No favourites saved</ListGroup.Item>)}
                         {favouritesArray.filter(el => el.isFavourite === true).map((el) => <ItemBeer key={el.id} el={el} />)}
                     </ListGroup>
                 </Col>
