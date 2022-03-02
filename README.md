@@ -2,7 +2,7 @@
 
 A responsive web application that accesses the PUNK API
 
-## APP deploy
+## APP Brewdog
 
 Take a look at my app: https://tender-sammet-53d833.netlify.app/
 
