@@ -5,7 +5,7 @@ const useFetch = (query) => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
     const [isError, setIsError] = useState(false);
-    let url = `https://api.punkapi.com/v2/beers${query}`;
+    let url = `https://api.punkapi.com/v3/beers${query}`;
 
     useEffect(() => {
         (async () => {
